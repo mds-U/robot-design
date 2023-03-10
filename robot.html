@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#3 ROBOT</title>
+    <style>
+    body {
+        background-color: rgb(226, 199, 163);
+    }
+
+    .big_rectangle {
+        height: 200px;
+        width: 301px;
+        background-color: rgb(140, 189, 43);
+        position: absolute;
+        top: 9%;
+        left: 40%;
+    }
+
+    .small_rectangle {
+        height: 135px;
+        width: 250px;
+        background-color: azure;
+        position: absolute;
+        top: 12%;
+        left: 42%;
+    }
+
+    .mini_rec {
+        height: 30px;
+        width: 100px;
+        background-color: rgb(120, 158, 45);
+        position: absolute;
+        top: 35%;
+        left: 47.5%;
+    }
+
+    .xs-rec {
+        height: 13px;
+        width: 75px;
+        background-color: rgb(91, 126, 20);
+        position: absolute;
+        top: 36.5%;
+        left: 48.5%;
+        border-radius: 25%;
+    }
+
+    .line1 {
+        height: 5px;
+        width: 250px;
+        background-color: lightgrey;
+        position: absolute;
+        top: 12%;
+        left: 42%;
+    }
+
+    .line3 {
+        height: 10px;
+        width: 250px;
+        background-color: lightgrey;
+        position: absolute;
+        top: 14%;
+        left: 42%;
+    }
+
+    .line4 {
+        height: 5px;
+        width: 250px;
+        background-color: lightgrey;
+        position: absolute;
+        top: 17%;
+        left: 42%;
+    }
+
+    .line5 {
+        height: 10px;
+        width: 250px;
+        background-color: lightgrey;
+        position: absolute;
+        top: 19%;
+        left: 42%; 
+    }
+
+    .line6 {
+        height: 5px;
+        width: 250px;
+        background-color: lightgrey;
+        position: absolute;
+        top: 22%;
+        left: 42%; 
+    }
+
+    .line7 {
+        height: 10px;
+        width: 250px;
+        background-color: lightgrey;
+        position: absolute;
+        top: 24%;
+        left: 42%; 
+    }
+
+    .line8 {
+        height: 5px;
+        width: 250px;
+        background-color: lightgrey;
+        position: absolute;
+        top: 27%;
+        left: 42%; 
+    }
+
+    .line9 {
+        height: 10px;
+        width: 250px;
+        background-color: lightgrey;
+        position: absolute;
+        top: 29%;
+        left: 42%;
+    }
+
+    .line10 {
+        height: 5px;
+        width: 250px;
+        background-color: lightgrey;
+        position: absolute;
+        top: 32%;
+        left: 42%;
+    }
+
+    .eye1 {
+        height: 40px;
+        width: 40px;
+        background-color: black;
+        position: absolute;
+        border-radius: 50%;
+        top: 19%;
+        left: 45%;
+    }
+
+    .eye2 {
+        height: 40px;
+        width: 40px;
+        background-color: black;
+        position: absolute;
+        border-radius: 50%;
+        top: 19%;
+        left: 54%;
+    }
+
+    .mouth {
+    -webkit-border-bottom-right-radius: 25px;
+	-webkit-border-bottom-left-radius: 25px;
+	-moz-border-radius-bottomright: 25px;
+	-moz-border-radius-bottomleft: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	height: 25px;
+	background-color: #000;
+	position: absolute;
+	width: 50px;
+	left: 49%;
+	top: 23%;
+    }
+
+    .neck {
+        height: 15px;
+        width: 100px;
+        position: absolute;
+        background-color: rgba(151, 135, 135, 0.815);
+        top: 41.5%;
+        left: 47.5%;
+    }
+
+    .squarebody1 {
+        height: 40px;
+        width: 205px;
+        position: absolute;
+        background-color: rgb(140, 189, 43);
+        top: 44%;
+        left: 44%;
+        border-radius: 2%;
+    }
+
+    .squarebody2 {
+        height: 40px;
+        width: 205px;
+        position: absolute;
+        background-color: rgb(140, 189, 43);
+        top: 52.5%;
+        left: 44%;
+        border-radius: 2%;
+    }
+
+    .gap_in_square {
+        height: 15px;
+        width: 170px;
+        position: absolute;
+        background-color: rgb(120, 158, 45);
+        top: 50%;
+        left: 45%;
+    }
+
+    .underpants {
+        height: 8.5px;
+        width: 170px;
+        position: absolute;
+        background-color: rgb(120, 158, 45);
+        top: 59%;
+        left: 45%;
+        border-radius: 0% 0% 5% 5%;
+    }
+
+    .innerbody {
+        height: 53px;
+        width: 156px;
+        position: absolute;
+        background-color: rgb(181, 224, 94);
+        top: 47.5%;
+        left: 45.5%;
+    }
+
+    .leg1 {
+        height: 100px;
+        width: 30px;
+        position: absolute;
+        background-color: rgba(151, 135, 135, 0.815);
+        top: 60.5%;
+        left: 47%;
+    }
+
+    .leg2 {
+        height: 100px;
+        width: 30px;
+        position: absolute;
+        background-color: rgba(151, 135, 135, 0.815);
+        top: 60.5%;
+        left: 53%;
+    }
+
+    .ankle1 {
+        height: 15px;
+        width: 53px;
+        position: absolute;
+        background-color: rgb(140, 189, 43);
+        border-radius: 20%;
+        top: 76.5%;
+        left: 46%;
+    }
+
+    .ankle2 {
+        height: 15px;
+        width: 53px;
+        position: absolute;
+        background-color: rgb(140, 189, 43);
+        border-radius: 20%;
+        top: 76.5%;
+        left: 52.3%;
+    }
+
+    .foot1 {
+        height: 25px;
+        width: 77px;
+        position: absolute;
+        background-color: rgb(140, 189, 43);
+        top: 78%;
+        left: 45%;
+    }
+
+    .foot2 {
+        height: 25px;
+        width: 77px;
+        position: absolute;
+        background-color: rgb(140, 189, 43);
+        top: 78%;
+        left: 51.5%;
+    }
+
+    .ear1 {
+        height: 100px;
+        width: 20px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        border-radius: 50% 0% 0% 50%;
+        top: 15%;
+        left: 38.5%;
+    }
+
+    .ear2 {
+        height: 100px;
+        width: 20px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        border-radius: 0% 50% 50% 0%;
+        top: 15%;
+        left: 62%;
+    }
+
+    .shoulder1 {
+        height: 25px;
+        width: 6.5px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 45%;
+        left: 43.5%;
+    }
+
+    .shoulder2 {
+        height: 25px;
+        width: 7px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 45%;
+        left: 59%;
+    }
+
+    .scapula1 {
+        height: 20px;
+        width: 6.5px;
+        position: absolute;
+        background-color: rgba(151, 135, 135, 0.815);
+        top: 45.5%;
+        left: 43%;
+        border-radius: 50% 0% 0% 50%;
+    }
+
+    .scapula2 {
+        height: 20px;
+        width: 9px;
+        position: absolute;
+        background-color: rgba(151, 135, 135, 0.815);
+        top: 45.5%;
+        left: 59.5%;
+        border-radius: 0% 50% 50% 0%;
+    }
+
+    .arm1 {
+        height:150px;
+        width:20px;
+        position:absolute;
+        background:rgba(151, 135, 135, 0.815);
+        top: 32%;
+        left: 37%;	
+        border-top-left-radius:50px;
+        border-top-right-radius:50px;
+        border-bottom-left-radius:30px;
+        border-bottom-right-radius:30px;
+        transform: rotateZ(105deg);
+    }
+
+    .arm2 {
+        height:150px;
+        width:20px;
+        position:absolute;
+        background:rgba(151, 135, 135, 0.815);
+        top: 44.5%;
+        left: 62.5%;	
+        border-top-left-radius:30px;
+        border-top-right-radius:30px;
+        border-bottom-left-radius:30px;
+        border-bottom-right-radius:30px;
+        transform: rotateZ(150deg);
+    }
+
+    .hand1 {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        background-color: rgb(140, 189, 43);
+        border-radius: 50%;
+        top: 38%;
+        left: 30.5%;
+    }
+
+    .hand2 {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        background-color: rgb(140, 189, 43);
+        border-radius: 50%;
+        top: 66%;
+        left: 65.5%;
+    }
+
+    .head {
+        height: 25px;
+        width: 75px;
+        position: absolute;
+        background-color: rgb(140, 189, 43);
+        border-radius: 30% 30% 0% 0%;
+        top: 6%;
+        left: 48%;
+    }
+
+    .lightbulb {
+        height: 29px;
+        width: 35px;
+        position: absolute;
+        background-color: rgb(203, 236, 82);
+        box-shadow: 
+            inset 0 0 50px #fff,
+            inset 20px 0 80px rgb(184, 240, 30),
+            inset -20px 0 80px rgb(184, 240, 30),  
+            inset 20px 0 300px rgb(184, 240, 30),  
+            inset -20px 0 300px rgb(184, 240, 30), 
+            0 0 50px #fff, 
+            -10px 0 80px rgb(184, 240, 30),
+            10px 0 80px rgb(184, 240, 30);         
+        border-radius: 50% 50% 0% 0%;
+        top: 1.5%;
+        left: 49.5%;
+    }
+
+    .design1 {
+        height: 35px;
+        width: 35px;
+        position: absolute;
+        background-color: rgba(151, 135, 135, 0.815);
+        border-radius: 50%;
+        top: 49%;
+        left: 46%;
+    }
+
+    .design2 {
+        height: 10px;
+        width: 23px;
+        position: absolute;
+        background-color: rgba(107, 103, 103, 0.815);
+        top: 50.5%;
+        left: 46.5%;
+        transform: rotateZ(30deg);
+    }
+
+    .design3 {
+        height: 5px;
+        width: 15px;
+        position: absolute;
+        background-color: rgb(203, 236, 82);
+        box-shadow: 
+            inset 0 0 50px #fff,
+            inset 20px 0 80px rgb(184, 240, 30),
+            inset -20px 0 80px rgb(184, 240, 30),  
+            inset 20px 0 300px rgb(184, 240, 30),  
+            inset -20px 0 300px rgb(184, 240, 30),
+            0 0 50px #fff, 
+            -10px 0 80px rgb(184, 240, 30),
+            10px 0 80px rgb(184, 240, 30);    
+        top: 52%;
+        left: 46.5%;
+        transform: rotateZ(30deg);
+    }
+
+    .design4 {
+        height: 15px;
+        width: 100px;
+        position: absolute;
+        background-color: rgb(229, 252, 28);
+        border-radius: 30%;
+        top: 49%;
+        left: 49%;
+    }
+
+    .design5 {
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        background-color: rgba(107, 103, 103, 0.815);
+        border-radius: 50%;
+        top: 52%;
+        left: 49.5%;
+    }
+
+    .design6 {
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        background-color: rgba(107, 103, 103, 0.815);
+        border-radius: 50%;
+        top: 52%;
+        left: 52%;
+    }
+
+    .design7 {
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        background-color: rgba(107, 103, 103, 0.815);
+        border-radius: 50%;
+        top: 52%;
+        left: 54.5%;
+    }
+
+    .design8 {
+        height: 10px;
+        width: 3px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 49.5%;
+        left: 49.5%;
+    }
+
+    .design9 {
+        height: 10px;
+        width: 3px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 49.5%;
+        left: 50.5%;
+    }
+
+    .design10 {
+        height: 10px;
+        width: 3px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 49.5%;
+        left: 51.5%;
+    }
+
+    .design11 {
+        height: 10px;
+        width: 3px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 49.5%;
+        left: 52.5%;
+    }
+
+    .design12 {
+        height: 10px;
+        width: 3px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 49.5%;
+        left: 53.5%;
+    }
+
+    .design13 {
+        height: 10px;
+        width: 3px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 49.5%;
+        left: 54.5%;
+    }
+
+    .design14 {
+        height: 10px;
+        width: 3px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 49.5%;
+        left: 55.5%;
+    }
+
+    .design15 {
+        height: 37px;
+        width: 6px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 9%;
+        left: 39.5%;
+    }
+
+    .design16 {
+        height: 37px;
+        width: 6px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 9%;
+        left: 62%;
+    }
+
+    .design17 {
+        height: 7px;
+        width: 116px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 8%;
+        left: 39.5%;
+    }
+
+    .design18 {
+        height: 7px;
+        width: 122px;
+        position: absolute;
+        background-color: rgba(52, 209, 13, 0.829);
+        top: 8%;
+        left: 53.5%;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="big_rectangle"></div>
+    <div class="small_rectangle"></div>
+    <div class="mini_rec"></div>
+    <div class="xs-rec"></div>
+    <div class="line1"></div>
+    <div class="line3"></div>
+    <div class="line4"></div>
+    <div class="line5"></div>
+    <div class="line6"></div>
+    <div class="line7"></div>
+    <div class="line8"></div>
+    <div class="line9"></div>
+    <div class="line10"></div>
+    <div class="eye1"></div>
+    <div class="eye2"></div>
+    <div class="mouth"></div>
+    <div class="neck"></div>
+    <div class="squarebody1"></div>
+    <div class="squarebody2"></div>
+    <div class="gap_in_square"></div>
+    <div class="underpants"></div>
+    <div class="innerbody"></div>
+    <div class="leg1"></div>
+    <div class="leg2"></div>
+    <div class="ankle1"></div>
+    <div class="ankle2"></div>
+    <div class="foot1"></div>
+    <div class="foot2"></div>
+    <div class="ear1"></div>
+    <div class="ear2"></div>
+    <div class="shoulder1"></div>
+    <div class="shoulder2"></div>
+    <div class="scapula1"></div>
+    <div class="scapula2"></div>
+    <div class="arm1"></div>
+    <div class="arm2"></div>
+    <div class="hand1"></div>
+    <div class="hand2"></div>
+    <div class="head"></div>
+    <div class="lightbulb"></div>
+    <div class="design1"></div>
+    <div class="design2"></div>
+    <div class="design3"></div>
+    <div class="design4"></div>
+    <div class="design5"></div>
+    <div class="design6"></div>
+    <div class="design7"></div>
+    <div class="design8"></div>
+    <div class="design9"></div>
+    <div class="design10"></div>
+    <div class="design11"></div>
+    <div class="design12"></div>
+    <div class="design13"></div>
+    <div class="design14"></div>
+    <div class="design15"></div>
+    <div class="design16"></div>
+    <div class="design17"></div>
+    <div class="design18"></div>
+  </body>
+</html>
